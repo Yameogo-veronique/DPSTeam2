@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>add-recipe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="recipeForm">
+  <ion-list lines="full">
+    <ion-item>
+      <ion-label position="floating">NAME</ion-label>
+      <ion-input  type="text" formControlName="nameInput"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >INGREDIENTS</ion-label>
+      <ion-input type="text" formControlName="ingredientInput"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">INSTRUCTION</ion-label>
+      <ion-input  type="text" formControlName="instructionInput"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button (click) = 'addRecipe()' color="primary" shape="full" expand="block" defaultHref="/">SAVE
+
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-list>
+</form>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="medium">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-footer>
